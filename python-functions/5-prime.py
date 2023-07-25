@@ -6,4 +6,4 @@ def is_prime(number):
     else:
         return True
     
-print(is_prime(18))
+# print(is_prime(18))
