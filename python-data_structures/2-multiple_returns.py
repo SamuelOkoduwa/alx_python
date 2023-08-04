@@ -6,5 +6,6 @@ def multiple_returns(sentence):
     if sentence == ():
         first == None
     else:
-        return ("Length: {:d} - First character: {}" .format(length, first))
-# print(multiple_returns("At Holberton school, I learnt C!"))
+        return (length, first)
+
+print(multiple_returns("At Holberton school, I learnt C!"))
