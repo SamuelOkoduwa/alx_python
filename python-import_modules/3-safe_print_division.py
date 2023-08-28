@@ -11,4 +11,4 @@ def safe_print_division(a,b):
     finally:
         print("Inside result: {}".format(result))
     
-safe_print_division(5,3)
+
