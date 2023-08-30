@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""A class with an object Square"""
+"""A module with an object Square"""
 class Square:
     """A private instance"""
     def __init__(self, size=0):
