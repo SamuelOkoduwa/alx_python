@@ -1,5 +1,6 @@
 # !/usr/bin/python3
 
+"""Starting a web application using flask"""
 from flask import Flask
 
 '''Initialization of the Flask Module'''
