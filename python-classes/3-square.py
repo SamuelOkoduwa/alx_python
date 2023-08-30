@@ -5,6 +5,7 @@ class Square:
     """A private instance"""
     def __init__(self, size=0):
         self.__size = size
+        
     """Property to retrieve instance of the class"""
     @property
     def size(self):
