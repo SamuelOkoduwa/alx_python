@@ -9,7 +9,7 @@ from flask import Flask
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
-"""Route"""
+
 @app.route("/")
 def Home():
     return "Hello HBNB!"
@@ -21,11 +21,11 @@ def about():
 @app.route("/c/<text>")
 def c_display(text):
     return ("C {}".format(text.replace("_", " ")))
-""" The route that displays the value of python"""
+
 @app.route("python/<text>")
 def python_display(text="is cool"):
     return "Python" + text.replace("_", " ")
 
-"""running the flask application"""
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000, host="0.0.0.0")
