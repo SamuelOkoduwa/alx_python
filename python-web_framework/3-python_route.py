@@ -1,29 +1,26 @@
-# !/usr/bin/python3
-
-"""Starting a web application using flask with a route displaying C followed by the value of the text variable
 """
+This is to start Flask web application including route
+"""
+
 from flask import Flask
-
 app = Flask(__name__)
-app.url_map.strict_slashes = False
 
+@app.route('/', strict_slashes=False)
+def Hello_HBNB():
+    return 'Hello HBNB!'
 
-@app.route("/")
-def Home():
-    return "Hello HBNB!"
+@app.route('/hbnb', strict_slashes=False)
+def HBNB():
+    return 'HBNB'
 
-@app.route("/hbnb")
-def about():
-    return "HBNB"
+@app.route('/c/<text>', strict_slashes=False)
+def cisfun(text):
+    return 'C ' + text.replace('_', ' ')
 
-@app.route("/c/<text>")
-def c_display(text):
-    return ("C {}".format(text.replace("_", " ")))
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def pythoniscool(text='is cool'):
+    return 'Python ' + text.replace('_', ' ')
 
-@app.route("python/<text>")
-def python_display(text="is cool"):
-    return "Python" + text.replace("_", " ")
-
-
-if __name__ == "__main__":
-    app.run(debug=True, port=5000, host="0.0.0.0")
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='5000')
