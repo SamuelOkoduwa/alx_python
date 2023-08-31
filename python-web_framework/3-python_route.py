@@ -21,7 +21,7 @@ def about():
 @app.route("/c/<text>")
 def c_display(text):
     return ("C {}".format(text.replace("_", " ")))
-
+""" The route that displays the value of python"""
 @app.route("python/<text>")
 def python_display(text="is cool"):
     return "Python" + text.replace("_", " ")
