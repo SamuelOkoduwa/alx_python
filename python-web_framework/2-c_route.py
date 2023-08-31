@@ -19,8 +19,9 @@ def about():
     return "HBNB"
 
 @app.route("/c/<text>")
-def c_display():
-    return ("C {}".format(text.replace("_", " ")))
+def c_display(text):
+    # return("C {}".format(text.replace("_", " ")))
+    return "C " + text.replace("_", " ")
 
 """running the flask application"""
 if __name__ == "__main__":
