@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 def multiple_returns(sentence): 
-    length = len(sentence)
-    first_charcater = sentence[0]
-    if length > 0:
-        return "Length: {:d} - First charater: {}".format(length, first_charcater)
-    else: 
-        None     
-        
-print(multiple_returns("At Holberton school, I learnt C!"))
+    length_of_sentence = len(sentence)
+    first_charcater = sentence[0] if length_of_sentence > 0 else "None"
+    return length_of_sentence, first_charcater
+# print(multiple_returns("At Holberton school, I learnt C!"))        
+
+
+
+# #!/usr/bin/python3
+# def multiple_returns(sentence):
+#     return (len(sentence), sentence[0] if len(sentence) > 0 else None)
+
+
 
 # def multiple_returns(sentence):
 #     # Check if the sentence is empty
