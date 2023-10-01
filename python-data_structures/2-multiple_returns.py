@@ -6,7 +6,7 @@ def multiple_returns(sentence):
         return "None"
     else:      
         return "Length: {:d} - First charater: {}".format(length, first_charcater)
-print(multiple_returns("At Holberton school, I learnt C!"))
+# print(multiple_returns("At Holberton school, I learnt C!"))
 
 # def multiple_returns(sentence):
 #     # Check if the sentence is empty
