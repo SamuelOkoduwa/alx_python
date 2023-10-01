@@ -2,11 +2,12 @@
 def multiple_returns(sentence): 
     length = len(sentence)
     first_charcater = sentence[0]
-    if len(sentence) == 0:
-        return "None"
-    else:      
+    if length > 0:
         return "Length: {:d} - First charater: {}".format(length, first_charcater)
-# print(multiple_returns("At Holberton school, I learnt C!"))
+    else: 
+        None     
+        
+print(multiple_returns("At Holberton school, I learnt C!"))
 
 # def multiple_returns(sentence):
 #     # Check if the sentence is empty
