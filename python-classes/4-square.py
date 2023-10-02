@@ -1,5 +1,4 @@
 #!/usr/bin/python 3
-
 """"A module class """
 class Square:
     """A private instance"""
