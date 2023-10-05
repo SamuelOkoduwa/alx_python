@@ -1,7 +1,10 @@
-# Import necessary libraries
-import requests  # Used to make HTTP requests to the API
-import json      # Used to work with JSON data
-import sys       # Used to access command-line arguments
+'''Import necessary libraries'''
+'''Making http request'''
+import requests  
+'''a json fomat'''
+import json 
+'''a command line argument'''     
+import sys    
 
 def get_employee_data(employee_id):
     # Define API endpoints
