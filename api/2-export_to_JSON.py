@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 # Import necessary libraries
 import json      # Used to work with JSON data
 import requests  # Used to make HTTP requests to the API
