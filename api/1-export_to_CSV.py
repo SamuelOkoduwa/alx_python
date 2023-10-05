@@ -1,7 +1,8 @@
 # #!/usr/bin/python3
 import sys
-import csv
 import requests
+import csv
+
 
 def get_employee_data(employee_id):
     # Define API endpoints
