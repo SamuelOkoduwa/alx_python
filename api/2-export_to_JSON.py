@@ -1,6 +1,6 @@
 # Import necessary libraries
-import json      # Used to work with JSON data
 import requests  # Used to make HTTP requests to the API
+import json      # Used to work with JSON data
 import sys       # Used to access command-line arguments
 
 def get_employee_data(employee_id):
