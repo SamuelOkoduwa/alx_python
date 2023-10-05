@@ -1,9 +1,10 @@
 '''Import necessary libraries'''
-'''Making http request'''
-import requests  
-'''a json fomat'''
+
+'''Importing modules'''
 import json 
-'''a command line argument'''     
+
+import requests  
+   
 import sys    
 
 def get_employee_data(employee_id):
