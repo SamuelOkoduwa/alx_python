@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 # Imported Modules
-import json
-import requests
-import sys
+import json	# json file format
+import requests	# used to make http request
+import sys	#used to access command line arguments
 
 
 def get_employee_data(employee_id):
