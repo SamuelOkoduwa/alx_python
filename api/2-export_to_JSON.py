@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
 # Imported Modules
-import json	# json file format
-import requests	# used to make http request
-import sys	#used to access command line arguments
 
+# json file format
+import json	
+# used to make http request
+import requests
+#used to access command line arguments	
+import sys	
 
 def get_employee_data(employee_id):
     # Define API endpoints
