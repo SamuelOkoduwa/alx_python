@@ -1,7 +1,39 @@
-'''Importing modules'''
+"""
+A Python script to export data in the JSON format.
+"""
+
 import json
 import requests
 
+if __name__ == "__main__":
+    api_request_users = requests.get("https://jsonplaceholder.typicode.com/users")
+    api_request_todos = requests.get("https://jsonplaceholder.typicode.com/todos")
+    users_data = api_request_users.json()
+    todos_data = api_request_todos.json()
+
+    filename = "todo_all_employees.json"
+
+    result = {}
+    for user in users_data:
+        user_id = user["id"]
+        username = user["username"]
+        user_todos = [
+            {
+                "task": todo["title"],
+                "completed": todo["completed"],
+                "username": username
+            }
+            for todo in todos_data
+            if todo["userId"] == user_id
+        ]
+        result[user_id] = user_todos
+
+    with open(filename, "w") as outfile:
+        json.dump(result, outfile)
+
+
+
+"""'''Importing modules'''
 def get_all_employee_data():
     # Define API endpoints
     base_url = "https://jsonplaceholder.typicode.com/users"
@@ -44,4 +76,5 @@ def get_all_employee_data():
         json.dump(all_employee_data, json_file, indent=4)  # Use indent for pretty formatting
 
 if __name__ == "__main__":
-    get_all_employee_data()
+    get_all_employee_data()"""
+
