@@ -7,12 +7,12 @@ def is_same_class(obj, a_class):
 class Myclass:
     pass
 
-my_instance = Myclass()
+a = 1
+if is_same_class(a, int):
+    print("{} is an instance of the class{}".format(a, int.__name__))
 
-# Returning true because the obbject is exactly an instance of the specified class
-result = is_same_class(my_instance, Myclass)
-print(result)
-
-# Returning false because the obbject is not exactly an instance of the specified class
-result = is_same_class(42, int)
-print(result)
+if is_same_class(a, float):
+    print("{} is an instance of the class {}".format(a, float.__name__))
+    
+if is_same_class(a, object):
+    print("{} is an instance of the class {}".format(a, object.__name__))
