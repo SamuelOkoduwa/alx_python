@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" Importing Request"""
 import requests
 
 url = "https://alu-intranet.hbtn.io/status"
