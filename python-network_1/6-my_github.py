@@ -26,3 +26,14 @@ if response.status_code == 200:
     print(user_id)
 else:
     print("Failed to fetch user information. Check your credentials.")
+
+if len(sys.argv) < 3:
+    print("Usage: python script.py <username> <personal_access_token>")
+    sys.exit(1)
+
+username = sys.argv[1]
+token = sys.argv[2]
+user_id = get_user_id(username, token)
+
+if user_id is not None:
+    print(f"{user_id}")
